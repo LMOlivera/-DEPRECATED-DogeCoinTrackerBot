@@ -1,4 +1,5 @@
 // IMPORTS
+const http = require('http');
 const TelegramBot = require('node-telegram-bot-api');
 const Binance = require('node-binance-api');
 const routes = require('../routes/route');
