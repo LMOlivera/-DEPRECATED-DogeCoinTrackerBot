@@ -6,7 +6,11 @@ const routes = require('../routes/route');
 require('../database/mongoose');
 
 // Anti-break
-const server = http.createServer(app);
+const requestListener = function (req, res) {
+  res.writeHead(200);
+  res.end('I am a bot! Use me in Telegram!');
+}
+const server = http.createServer(requestListener);
 const port = process.env.PORT || 3000;
 
 
