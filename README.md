@@ -1,4 +1,5 @@
 # DogeCoinTrackerBot 1.0
+![alt text](https://github.com/LMOlivera/DogeCoinTrackerBot/blob/main/images/dogecoin.png "Dogecoin logo")
 
 DogeCoinTrackerBot is a Telegram bot that sends you a Telegram message when the Dogecoin's value fluctuates. You can set up the bot to tell you when it has exceeded certain value or is lower than a certain value, so you know when it is a good time to buy, hold or sell.
 
