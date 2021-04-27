@@ -4,6 +4,10 @@ const Binance = require('node-binance-api');
 const routes = require('../routes/route');
 require('../database/mongoose');
 
+// Anti-break
+const server = http.createServer(app);
+const port = process.env.PORT || 3000;
+
 
 // API KEYS AND SECRETS
 const BOT_API_KEY = process.env.BOT_API_KEY;
@@ -21,3 +25,8 @@ const BOT = new TelegramBot(BOT_API_KEY, {polling: true});
 
 // Commands in Bot
 routes(BOT, BINANCE_CONFIG);
+
+// Anti-break
+server.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
+});
