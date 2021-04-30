@@ -1,3 +1,4 @@
+// This file could use some serious refactor
 const User = require('../models/User');
 
 const STANDARD_MENU = {

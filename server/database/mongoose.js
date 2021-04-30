@@ -5,5 +5,10 @@ mongoose.connect(process.env.MONGODB_URL, {
     useCreateIndex: true,
     useFindAndModify: false,
     useUnifiedTopology: true 
-}).then(() => console.log("Database connected!"))
-.catch(err => console.log(err));;
+}).then(() => {
+    console.log("Database connected!")
+})
+.catch(err => {
+    // Send exception email
+    console.log(err)
+});;
