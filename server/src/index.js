@@ -1,3 +1,6 @@
+// PREVENTS node-telegram-bot-api ERROR MESSAGES
+process.env.NTBA_FIX_319 = 1;
+
 // IMPORTS
 const http = require('http');
 const TelegramBot = require('node-telegram-bot-api');
@@ -8,7 +11,7 @@ require('../database/mongoose');
 // Heroku Anti-break
 const requestListener = function (req, res) {
   res.writeHead(200);
-  res.end('I am a bot! Use me in Telegram!');
+  res.end('I am the DogeCoinTracker bot! Use me in Telegram!');
 }
 const server = http.createServer(requestListener);
 const port = process.env.PORT || 3000;
