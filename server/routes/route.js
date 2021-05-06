@@ -82,7 +82,7 @@ function hooks(bot, binance) {
     bot.onText(/\/min (.+)/, async (msg, match) => {
         try {
             const minValue = match[1].replace(',', '.');
-            if (Number.isNaN(maxValue)) {
+            if (Number.isNaN(minValue)) {
                 await bot.sendMessage(msg.chat.id, `I can only set up reminders with numbers, please look at the example and try again.`);
             } else {
                 await bot.sendMessage(msg.chat.id, `I will set up a reminder for this value. Give me a second.`);
