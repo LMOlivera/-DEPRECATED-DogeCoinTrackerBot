@@ -1,12 +1,14 @@
 // PREVENTS node-telegram-bot-api ERROR MESSAGES
 process.env.NTBA_FIX_319 = 1;
 
+
 // IMPORTS
 const http = require('http');
 const TelegramBot = require('node-telegram-bot-api');
 const Binance = require('node-binance-api');
 const routes = require('../routes/route');
 require('../database/mongoose');
+
 
 // Heroku Anti-break
 const requestListener = function (req, res) {
@@ -33,6 +35,7 @@ const BOT = new TelegramBot(BOT_API_KEY, {polling: true});
 
 // Commands in Bot
 routes(BOT, BINANCE_CONFIG);
+
 
 // Heroku Anti-break
 server.listen(port, () => {
