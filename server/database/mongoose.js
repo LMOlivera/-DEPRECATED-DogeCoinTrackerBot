@@ -9,6 +9,6 @@ mongoose.connect(process.env.MONGODB_URL, {
     console.log("Database connected!")
 })
 .catch(err => {
-    // Send exception email
+    // TODO: Send exception email
     console.log(err)
 });;
